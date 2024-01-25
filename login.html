@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Stylesheet/setup.css">
+    <link rel="stylesheet" href="Stylesheet/login.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    <link rel="shortcut icon" href="image/ws_logotipo_ws.png" type="image/x-icon">
+    <title>WeSoft</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="login-content">
+            <form action="index.html" class="form-login">
+                <h2 class="title">Welcome</h2>
+                <div class="input-div one">
+                    <div class="i">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="div">
+                        <h5>Username</h5>
+                        <input type="text" class="input">
+                    </div>
+                </div>
+                <div class="input-div pass">
+                    <div class="i">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div class="div">
+                        <h5>Password</h5>
+                        <input type="password" class="input">
+                    </div>
+                </div>
+                <a href="index.html">
+                    <input type="submit" class="btn" value="Login">
+                </a>
+                <a href="#">Forgot Password?</a>
+            </form>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        const inputs = document.querySelectorAll(".input");
+        function addCl() {
+            let par = this.parentNode.parentNode;
+            par.classList.add("focus");
+        }
+        function remC1() {
+            let par = this.parentNode.parentNode;
+            if (this.value == "")
+                par.classList.remove("focus");
+        }
+        inputs.forEach(input => {
+            input.addEventListener("focus", addCl);
+            input.addEventListener("blur", remC1);
+        })
+    </script>
+</body>
+
+</html>

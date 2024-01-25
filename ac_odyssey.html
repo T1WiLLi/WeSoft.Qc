@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ"
+    crossorigin="anonymous"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link rel="stylesheet" href="Stylesheet/vendor/bootstrap.css">
+  <link rel="stylesheet" href="Stylesheet/setup.css">
+  <link rel="stylesheet" href="Stylesheet/StyleOdyssey.css">
+  <link rel="shortcut icon" href="image//odyssey/favicon-16x16.png" type="image/x-icon">
+  <title>Assassin's Greed Odyssey</title>
+</head>
+
+<body>
+  <script>
+    const audio = new Audio('video/backgroundmusicOdyssey.mp3');
+    let isPlaying = false;
+
+    function playAudio() {
+      audio.currentTime = 0;
+      audio.play();
+      isPlaying = true;
+      audio.loop = true;
+      audio.volume = 0.1;
+    }
+
+    document.addEventListener('click', () => {
+      if (!isPlaying) {
+        playAudio();
+      }
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.code === 'Space' && !isPlaying) {
+        playAudio();
+      }
+    });
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 0 && !isPlaying) {
+        playAudio();
+      }
+    });
+
+    window.addEventListener('load', () => {
+      const audioSource = document.createElement('source');
+      audioSource.src = 'video/backgroundmusic.mp3';
+      audio.appendChild(audioSource);
+    });
+  </script>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="image//odyssey/logo.png" alt="Logo" width="50" height="50" class="d-inline-block align-text-top">
+        <h2>Assassin's Greed Odyssey</h2>
+      </a>
+      <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="toggler-icon top-bar"></span>
+        <span class="toggler-icon middle-bar"></span>
+        <span class="toggler-icon bottom-bar"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+        <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main-content-first-page -->
+  <div class="main-content">
+    <div class="background">
+      <video src="video/background_anim.mp4" autoplay loop></video>
+    </div>
+    <div class="content__container">
+      <div class="content__container-header_txt">
+        <div class="header_txt">
+          <h1>Live like a Spartan</h1>
+        </div>
+        <div class="header_txt">
+          <h1>Fight like a Spartan</h1>
+        </div>
+        <div class="header_txt">
+          <h1>Think like a Spartan</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="separation__bar"></div>
+
+  <!-- SecondPage -->
+
+  <div class="SecondPage">
+    <div class="SecondPage__Headertxt" data-aos="fade-up" data-aos-duration="2000">
+      <h3>Create your odyssey</h3>
+    </div>
+    <div class="chooseCharacter__MainSection">
+      <div class="left_Section">
+        <div class="card" style="width: 18rem;">
+          <img src="image//odyssey/alexios.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Alexios</h5>
+            <p class="card-text">Fierce and fearless warrior who fights for what's right. Choose Alexios and lead him on
+              a dangerous journey of discovery and revenge.</p>
+          </div>
+          <div class="message-box">
+            <p>Ready to go on an adventure</p>
+          </div>
+        </div>
+      </div>
+      <div class="right_Section">
+        <div class="card" style="width: 18rem;">
+          <img src="image//odyssey/kassandra.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Kassandra</h5>
+            <p class="card-text">Brave and cunning assassin who seeks justice and redemption. Choose Kassandra and start
+              on a dangerous quest to uncover the truth.</p>
+          </div>
+          <div class="message-box">
+            <p>Ready to fight for justice</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="separation__bar"></div>
+
+  <!-- ThirdPage -->
+
+  <div class="ThirdPage">
+    <div class="ThirdPage__Headertxt" data-aos="zoom-in" data-aos-duration="2000">
+      <h3> Explore Greece Like Never Before</h3>
+    </div>
+    <div class="ThirdPage__text">
+      Embark on a journey unlike any other, and explore the ancient and mythical land of Greece in Assassin's Creed
+      Odyssey. Step into the shoes of a Spartan mercenary, and witness the beauty and danger of a world long gone.
+      From the sun-drenched beaches of the Aegean Sea to the snowy peaks of Mount Olympus, Odyssey offers a vast and
+      varied landscape to discover. Roam the bustling cities of Athens and Sparta, or venture out into the untamed
+      wilderness, filled with fearsome beasts and legendary creatures.
+      But beware, for the land of Greece is also steeped in conflict and political intrigue. As a mercenary, you will be
+      caught in the middle of a war between Athens and Sparta, and must navigate the treacherous waters of alliances and
+      betrayals.
+      Amidst this chaos, you will also uncover the secrets of your own past, and unravel a mystery that spans
+      generations. The fate of Greece itself may depend on your actions, and the choices you make will have far-reaching
+      consequences.
+      So prepare to embark on a journey of epic proportions, and experience the thrill of exploration and discovery in
+      Assassin's Creed Odyssey. The land of Greece awaits you, and the adventure of a lifetime is just a few clicks
+      away.
+    </div>
+    <div class="ThirdPage__text_mobile">
+      Explore ancient Greece in Assassin's Creed Odyssey as a Spartan mercenary. Uncover secrets and navigate political
+      intrigue in a vast, treacherous landscape. Your choices will shape the course of history.
+    </div>
+    <div class="entryQuote_steam">
+      <div class="entryQuote_steam_content">
+        <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react//icons/steam.svg"
+          alt="Steam ICON">
+        <div class="entryQuote_steam_txt">
+          <p>PLAY NOW ($79.99 CAD)</p>
+          <span>DOWNLOAD ON STEAM</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="separation__bar"></div>
+
+  <!-- FourthPage -->
+
+  <div class="FourthPage">
+    <div class="carousel">
+      <div id="carouselExampleCaptions" class="carousel slide" data-bs-interval="3000">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="/image//odyssey/elysium.jpg" class="d-block w-100" alt="..." preload="true">
+            <div class="carousel-caption d-none d-md-block" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+              <h5>Explore the Elysium</h5>
+              <p>A paradise for the blessed dead, shrouded in mystery and wonder.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="image//odyssey/underworld.jpg" class="d-block w-100" alt="..." preload="true">
+            <div class="carousel-caption d-none d-md-block" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+              <h5>Explore the Underworld</h5>
+              <p>A grim and foreboding realm, ruled by Hades himself.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="image//odyssey/atlantis.jpg" class="d-block w-100" alt="..." preload="true">
+            <div class="carousel-caption d-none d-md-block" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+              <h5>Explore the Atlantis</h5>
+              <p>A lost city of myth and legend, home to secrets beyond imagining.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="separation__bar"></div>
+
+  <!-- Footer -->
+
+  <footer>
+    <div class="pre-footer">
+      <div class="pre-footer__background">
+        <img src="image/odyssey/background_footer.jpg" alt="">
+      </div>
+      <div class="footer__text">
+        Experience the epic Greek adventure of AC: Odyssey with Alexios or Kassandra. Your journey begins now.
+      </div>
+      <div class="entryQuote_steam">
+        <div class="entryQuote_steam_content">
+          <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react//icons/steam.svg"
+            alt="Steam ICON">
+          <div class="entryQuote_steam_txt">
+            <p>PLAY NOW ($79.99 CAD)</p>
+            <span>DOWNLOAD ON STEAM</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__copyright">
+      <div class="--footer-container">
+        <div class="--footer_content --social_link">
+          <i class="fa-solid fa-gamepad"></i>
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-twitter"></i>
+        </div>
+        <div class="--footer_content --ext_link">
+          <ul>
+            <li>
+              <a href="">Privacy Notice</a>
+            </li>
+            <li>
+              <a href="">Terms Of Use</a>
+            </li>
+            <li>
+              <a href="">Do Not Share My Personal Information</a>
+            </li>
+            <li>
+              <a href="">Game events</a>
+            </li>
+            <li>
+              <a href="">Cookie Preference</a>
+            </li>
+          </ul>
+        </div>
+        <div class="--footer_content --copyright">
+          <p class="--copyright_text">
+            &copy; 2023 Wesoft QC. All right reserved.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>
